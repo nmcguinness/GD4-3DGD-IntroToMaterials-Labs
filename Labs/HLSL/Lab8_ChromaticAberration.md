@@ -67,6 +67,12 @@ As in previous labs, you will use a small Custom node to get correct screen-spac
 
 This returns the current pixel’s screen-space UV in the range [0, 1].  
 
+###  Access the Scene Texture
+1. Add a **SceneTexture** node.
+2. Set **Scene Texture Id → PostProcessInput0**
+
+This gives you access to the final rendered scene images your filter will operate on.
+
 ## 4. Add Chromatic Aberration Parameters  
 
 Add the following **Scalar Parameters** to control your effect:  
@@ -97,12 +103,13 @@ You will now create a **Custom HLSL node** that:
 
 2. Add the following **Inputs**:  
 
-| Input Name | Type | Connect From |
-| :- | :- | :- |
-| `uv` | Float2 | Output of `GetScreenUVs` |
-| `aberrationStrength` | Float1 | `AberrationStrength` parameter |
-| `edgeBoost` | Float1 | `EdgeBoost` parameter |
-| `centerDeadZone` | Float1 | `CenterDeadZone` parameter |
+| Input Name | Connect |
+|:-|:-|
+| `sceneTexture` | Output of `SceneTexture` |
+| `uv` |  Output of `GetScreenUVs` |
+| `aberrationStrength` | `AberrationStrength` parameter |
+| `edgeBoost` |  `EdgeBoost` parameter |
+| `centerDeadZone` | `CenterDeadZone` parameter |
 
 ### 5.2 HLSL Code  
 
