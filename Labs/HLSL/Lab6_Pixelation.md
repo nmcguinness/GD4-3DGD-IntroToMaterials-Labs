@@ -74,6 +74,11 @@ return GetSceneTextureUV(Parameters);
 This returns the current pixel’s screen‑space UV in 0..1.
 
 
+###  Access the Scene Texture
+1. Add a **SceneTexture** node.
+2. Set **Scene Texture Id → PostProcessInput0**
+
+This gives you access to the final rendered scene images your filter will operate on.
 
 ## 4. Add Material Parameters
 
@@ -109,11 +114,12 @@ We will create a Custom HLSL node that:
 
 2. Add these **Inputs**:
 
-| Input Name | Type | Connect |
-|:-|:-|:-|
-| `uv` | Float2 | Output of `GetScreenUVs` |
-| `pixelCount` | Float1 | Parameter `PixelCount` |
-| `pixelCountY` | Float1 | Parameter `PixelCountY` *(optional)* |
+| Input Name | Connect |
+|:-|:-|
+| `sceneTexture` | Output of `SceneTexture` |
+| `uv` | Output of `GetScreenUVs` |
+| `pixelCount` | Parameter `PixelCount` |
+| `pixelCountY` | Parameter `PixelCountY` *(optional)* |
 
 
 

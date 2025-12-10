@@ -94,13 +94,13 @@ Add a **Custom** node:
 
 Add these **Inputs** (exact spelling is critical):
 
-| Input Name | Type | Connect From |
-| :- | :- | :- |
-| `uv` | Float2 | Output of `GetScreenUVs` |
-| `timeValue` | Float1 | Time node |
-| `distortionStrength` | Float1 | DistortionStrength |
-| `distortionScale` | Float1 | DistortionScale |
-| `distortionSpeed` | Float1 | DistortionSpeed |
+| Input Name | Connect |
+|:-|:-|
+| `uv` | Output of `GetScreenUVs` |
+| `timeValue` | Time node |
+| `distortionStrength` | DistortionStrength |
+| `distortionScale` | DistortionScale |
+| `distortionSpeed` | DistortionSpeed |
 
 Wire each input accordingly.
 

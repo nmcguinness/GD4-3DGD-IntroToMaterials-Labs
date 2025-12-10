@@ -105,12 +105,12 @@ You will now create a **Custom HLSL node** that:
 
 2. In the **Inputs** list for this node, add:
 
-| Input Name          | Type   | Connect From                         |
-| :- | :- | :- |
-| `uv`                | Float2 | Output of `GetScreenUVs`            |
-| `vignetteRadius`    | Float1 | `VignetteRadius` parameter          |
-| `vignetteSoftness`  | Float1 | `VignetteSoftness` parameter        |
-| `vignetteIntensity` | Float1 | `VignetteIntensity` parameter       |
+| Input Name | Connect |
+|:-|:-|
+| `uv`                | Output of `GetScreenUVs`            |
+| `vignetteRadius`    | `VignetteRadius` parameter          |
+| `vignetteSoftness`  | `VignetteSoftness` parameter        |
+| `vignetteIntensity` | `VignetteIntensity` parameter       |
 
 
 
