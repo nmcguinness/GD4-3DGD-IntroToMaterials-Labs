@@ -3,8 +3,8 @@
 
 ## Overview
 
-In this lab you will create a procedural **animated raindrop and ripple effect** using a **Custom HLSL node** inside Unreal Engine’s Material Editor.  
-This effect draws expanding rings (ripples), randomises their positions, and animates them over time using a pulse-driven radius system.
+In this lab you will create a simple procedural **animated raindrop and ripple effect** using a **Custom HLSL node** inside Unreal Engine’s Material Editor.  
+This effect draws expanding rings (ripples), randomises their positions, and animates them over time using a pulse-driven radius system. The aim is not to produce a production ready shader. It is to show how HLSL can support dynamic texture generation.
 
 This lab builds on the Custom Node techniques introduced in **Lab 1 – Introduction to Custom Nodes & HLSL**, extending them with loops, randomisation, and soft fading.
 
@@ -223,5 +223,3 @@ float2 rotate(float2 uv, float angle)
     );
 }
 ```
-
-**End of Lab 2 – Animated Raindrops with Custom Nodes & HLSL**
